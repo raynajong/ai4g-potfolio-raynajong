@@ -23,31 +23,35 @@ _List the files, or link to them. Notebook exports, screenshots, scripts._
 > Your tool and your SDG for this hackathon are announced at the **start of Friday's class**.
 > Write them down here once you know them.
 
-**Project title:**
+**Project title:** 
+Campus Dutch
 
-**My pair partner:**
+**My pair partner:** 
+Felix Reichle
 
-**Tool we had to use:**
+**Tool we had to use:** 
+Bolt.new
 
 **SDG we had to address:**
+SDG 4: Quality Education
 
 **What problem does it solve, and for whom?**
-_Name a real, specific user. "Everyone" is not a user._
+Campus Dutch is made for international students in the Netherlands with little or basic knowledge of Dutch. While apps like Duolingo teach general language for everyday situations, Campus Dutch focuses specifically on university terms and instructions. Students can often use English in daily conversations or when ordering at a café, but Dutch words related to grades, deadlines, schedules and assignments can still be confusing. Users can therefore learn this information in their preferred language.
 
 **What did you build?**
-_Two or three sentences. What can a user actually do with it?_
+We built a multilingual learning app with short lessons, flashcards and multiple-choice quizzes. Users can learn useful Dutch university terms, view explanations in their preferred language, retry incorrect answers, earn badges and track their progress.
 
 **Link to the live thing (if any):**
 _Deployed URL, workflow export, video demo - whatever proves it works._
 
 **How do I run it?**
-_Short instructions so someone else can start it._
+Open the live link in a web browser and click Start Learning. Select your preferred language and begin a lesson. No account or download is needed, and the user’s learning progress and language preference are saved automatically on their device.
 
 **Who did what?**
 _Be honest about the split of work between you and your partner._
 
 **Ethical reflection - what are the risks of your tool? Who could it harm?**
-_Every hackathon requires this. One honest paragraph beats three vague ones._
+Campus Dutch supports multiple languages, but it may still exclude students whose preferred language is unavailable. It also assumes that users have access to a suitable device and the internet. Incorrect or oversimplified translations could confuse students about important deadlines, grades or assignments, especially if meanings differ between languages. The translations should therefore be checked carefully. The app is meant to support learning and should not replace official university information or direct communication with a lecturer.
 
 ### Checklist
 - [ ] Prototype code (or export / workflow file) is in `hackathon/`
@@ -72,6 +76,7 @@ _Every hackathon requires this. One honest paragraph beats three vague ones._
 ## 4. Reflection
 
 **What is the most important thing I learned this week?**
+The most important thing I learned this week is that AI can create a working app from a written prompt, but the result depends on how clearly and specifically the prompt is written. We still had to make decisions about the target group, content, design and features, and test whether everything worked correctly. I learned that AI can make the building process faster, but it does not replace our own ideas, decisions and checks.
 
 **Where does this connect to "AI for Good"?**
-_One concrete link to ethics, sustainability or social impact._
+Campus Dutch connects to AI for Good because it uses AI to create a learning tool that can make education more accessible for international students. Understanding Dutch university terms can help students follow instructions, communicate with lecturers and feel more confident while studying in the Netherlands. However, translations can be incorrect or too simple, so the app should support official university information rather than replace it.
