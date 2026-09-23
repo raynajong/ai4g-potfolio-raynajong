@@ -27,6 +27,7 @@ _List the files, or link to them. Notebook exports, screenshots, scripts._
 RentBuddy
 
 **My pair partner:**
+Jelle Schwarz
 
 **Tool we had to use:**
 We used Base44 to build the web app and connected the Contract Helper to the platform’s built-in AI. The AI feature uses an API to send the contract text to an AI model and return the explanation to the app.
