@@ -41,6 +41,11 @@ RentBuddy is made for international students aged 18 to 30 who are searching for
 **What did you build?**
 We built a web app where international students can find useful information about renting and subletting in The Hague. Users can explore housing resources, learn important Dutch rental terms and use the Contract Helper to translate and explain the most important parts of a Dutch rental contract in their preferred language.
 
+**How did we build it?**
+We first used Base44 to create the design and structure of the RentBuddy web app. We gave Base44 a detailed prompt explaining the target audience, the pages we needed and how the Contract Helper should work. We then copied the generated code into Visual Studio Code and used it to create a separate working version of the website.
+
+Originally, the Contract Helper in Base44 was supposed to send the contract to a Python backend, but we could not get this connection to work properly. Because the assignment required us to make a real API call from Python, we decided to set up the connection ourselves outside Base44. With help from ChatGPT, we corrected and updated the code so that it worked with the newest version of the Gemini API. The Python code now sends the rental contract and instructions to Gemini, receives the AI-generated analysis and returns the result for the user.
+
 **Link to the live thing (if any):**
 _Deployed URL, workflow export, video demo - whatever proves it works._
 
@@ -51,7 +56,7 @@ Open the live link in a browser and use the navigation menu to explore the diffe
 When someone uses the Contract Helper, the contract text and selected language are sent to a secure function inside the platform. This function gives the AI instructions about what information to find, such as the rent, deposit, notice period, service costs and subletting conditions. The AI sends its answer back to the app, where it is organised into clear sections for the user. The API key is kept securely on the backend and is not visible in the website or browser.
 
 **Who did what?**
-I worked on the idea and target audience, prompt with help from AI to build the app. My partner worked on helping me figure out the API, a bit of desk research and the powerpoint. We worked together on brainstorming and figuring out how the API works.
+I worked mainly on the idea, target audience, content, structure and design of RentBuddy. I created the detailed Base44 prompt, worked on the different pages and information in the app, tested the features and prepared the project explanation and demo. Jelle handled the more technical part of moving the code into Visual Studio Code, fixing the code and connecting the Python program to the Gemini API, because I was not able to get that part working myself. We worked together on testing the final result and deciding what the Contract Helper needed to show.
 
 **Ethical reflection - what are the risks of your tool? Who could it harm?**
 The biggest risk is that the AI could misunderstand part of a rental contract, leave out important information or make a translation mistake. This could harm international students who rely on the explanation and cannot easily check the original Dutch contract themselves. To reduce this risk, RentBuddy shows which information was found in the contract, says when something is not clearly stated and warns users that the result is not legal advice. Users are encouraged to verify important information with organisations such as the Huurcommissie, Juridisch Loket or the Municipality of The Hague. Contracts can also contain private information, so users are warned to remove unnecessary names, addresses, signatures and bank details before submitting them.
