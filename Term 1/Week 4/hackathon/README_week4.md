@@ -26,16 +26,19 @@ _List the files, or link to them. Notebook exports, screenshots, scripts._
 **Project title:**
 
 **My pair partner:**
+Bart Bruggeling 
 
 **Tool we had to use:**
+ComfyUI
 
 **SDG we had to address:**
+SDG 13 — **Climate Action** (targets 13.2 and 13.3)
 
 **What problem does it solve, and for whom?**
-_Name a real, specific user. "Everyone" is not a user._
+Many young shoppers know fast fashion has an environmental impact but may not see the climate cost behind a cheap item of clothing. Our short film is intended for 16–24-year-olds who encounter fashion content on Instagram or TikTok. It uses a short visual story to connect buying, clothing production, and disposal. It is not aimed at policymakers or people looking for a detailed guide to textile emissions.
 
 **What did you build?**
-_Two or three sentences. What can a user actually do with it?_
+We made a [final duration]-second film with [number] AI-generated shots about the hidden climate impact of fast fashion. We generated the visuals and motion in ComfyUI, then edited the clips into a film with text and [music/recorded voiceover].
 
 **Link to the live thing (if any):**
 _Deployed URL, workflow export, video demo - whatever proves it works._
@@ -44,10 +47,10 @@ _Deployed URL, workflow export, video demo - whatever proves it works._
 _Short instructions so someone else can start it._
 
 **Who did what?**
-_Be honest about the split of work between you and your partner._
+I worked on [final story, source checking, shot list, slides, README—adjust to what you actually do]. Bart worked on [ComfyUI workflow, generation, editing—adjust after completion]. We reviewed [the storyboard/final film] together.
 
 **Ethical reflection - what are the risks of your tool? Who could it harm?**
-_Every hackathon requires this. One honest paragraph beats three vague ones._
+Our landfill and community scenes are AI-generated illustrations, not footage of a real place or event. We avoided identifiable faces and state in the [film credits/description] that the visuals are AI-generated, so viewers do not mistake them for documentary evidence. We generated [actual number] images/clips to select [actual number] final shots; this also made us consider the computing cost of producing an awareness film.
 
 ### Checklist
 - [ ] Prototype code (or export / workflow file) is in `hackathon/`
