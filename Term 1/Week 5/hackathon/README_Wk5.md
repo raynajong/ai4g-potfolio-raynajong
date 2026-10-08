@@ -4,15 +4,12 @@
 
 **What was the assignment?**
 
-This week's topic was machine learning basics. The hackathon applied these ideas by comparing classification models on a real dataset. The exact homework and workshop tasks should be listed here separately from the hackathon.
 
 **What did I hand in?**
 
-[Add the names and links of your Week 5 homework and workshop files. The supplied project files do not identify these submissions.]
 
 **What did I find difficult, and how did I solve it?**
 
-[Add your own example of something you found difficult and what you did to understand or fix it. For example, explain whether you needed help understanding recall, cross-validation or the Python code, and describe what actually helped.]
 
 ### Checklist
 
@@ -25,9 +22,9 @@ This week's topic was machine learning basics. The hackathon applied these ideas
 
 **Project title:** Model Showdown: Predicting Credit-Card Default
 
-**My pair partner:** [Add your Week 5 partner's name.]
+**My pair partner:** Lili and Slyman
 
-**Tool we had to use:** A Python Jupyter notebook with scikit-learn. The notebook can run in Google Colab. We compared K-Nearest Neighbours (KNN), Logistic Regression and Random Forest. [Add the AI assistant(s) you actually used to help develop or understand the code.]
+**Tool we had to use:** A Python Jupyter notebook with scikit-learn. The notebook can run in Google Colab. We compared K-Nearest Neighbours (KNN), Logistic Regression and Random Forest. 
 
 **SDG we had to address:** SDG 8: Decent Work and Economic Growth.
 
@@ -64,7 +61,7 @@ The baseline always predicts the majority class: no default. It achieves 77.9% t
 #### The three models and tuning
 
 | Model | Simple explanation | Best settings in this experiment |
-|---|---|---|
+
 | KNN | Predicts using the outcomes of similar customers. | `n_neighbors=3`, `weights=distance` |
 | Logistic Regression | Uses weighted features to estimate the probability of default. | `C=10` |
 | Random Forest | Combines predictions from many decision trees. | `n_estimators=100`, `max_depth=None`, `min_samples_split=5` |
@@ -72,7 +69,6 @@ The baseline always predicts the majority class: no default. It achieves 77.9% t
 We used `GridSearchCV` with five-fold cross-validation and recall as the scoring metric. It tests different settings on splits of the training data and selects the settings with the highest average validation recall. The separate test set provides the final evaluation on unseen cases.
 
 | Model | Training recall | Cross-validation recall | Test recall |
-|---|---:|---:|---:|
 | KNN | 99.8% | 35.5% ± 0.9 percentage points | 36.1% |
 | Logistic Regression | 36.4% | 36.0% ± 1.2 percentage points | 35.3% |
 | Random Forest | 89.2% | 37.3% ± 0.9 percentage points | 36.2% |
@@ -117,7 +113,6 @@ For a made-up customer, the saved Random Forest output predicts class `1`, meani
 
 The prototype is a notebook rather than a deployed website. Open [`Hackathon5-model showdown.ipynb`](hackathon/Hackathon5-model%20showdown.ipynb) to inspect the code and saved outputs. The notebook includes the fictional customer demonstration.
 
-[Add a recording or Colab link if you have one. The relative notebook link assumes you place the file in `hackathon/`.]
 
 ### How do I run it?
 
@@ -132,9 +127,8 @@ The notebook uses pandas, NumPy, scikit-learn and matplotlib. An internet connec
 
 ### Who did what?
 
-- **My contribution:** [Describe the research, notebook work, checking, README or presentation work you actually completed.]
-- **My partner's contribution:** [Add your partner's actual tasks.]
-- **Our collaboration with AI:** [Name the AI tool(s), explain what help you requested and describe how you checked or changed the output. Include a real example of a decision you made instead of accepting the generated result unchanged.]
+- **My contribution:** I completed the README and the slides. I analyzed the deskresearch to be able to put them in the slides.
+- **My partner's contribution:** Slyman did the research and shared it with us, he also made the modelshowdown.
 
 ### Ethical reflection: what are the risks of your tool? Who could it harm?
 
@@ -147,13 +141,8 @@ Incorrect predictions could harm credit-card customers if a bank treats them as 
 - [ ] The prototype actually runs, and I wrote down how to run it
 - [x] Ethical reflection written above
 
-The saved notebook contains execution outputs. Confirm a fresh run and the repository folder locations before checking the remaining boxes.
-
----
 
 ## 3. Presentation → [`presentation/`](presentation/)
-
-Only complete this section if your group was selected to present this week.
 
 - [ ] My group presented in this week
 - [ ] Slides are in `presentation/`
@@ -161,15 +150,12 @@ Only complete this section if your group was selected to present this week.
 
 **How did it go? What would I do differently next time?**
 
-[If you presented, describe how it actually went and one specific improvement. Otherwise, write: “Not applicable: our group was not selected to present this week.”]
 
----
 
 ## 4. Reflection
 
 **What is the most important thing I learned this week?**
 
-*Suggested wording to adapt to your own experience:*
 
 I learned that a high accuracy score does not automatically mean a model is useful. Our baseline was correct about 78% of the time while missing every default case. Comparing recall, validation results and actual mistakes helped me understand why the evaluation metric needs to match the problem. I also learned that a model can perform very well on training data and still struggle with new cases.
 
