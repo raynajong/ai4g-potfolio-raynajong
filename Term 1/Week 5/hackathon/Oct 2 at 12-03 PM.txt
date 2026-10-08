@@ -1,0 +1,72 @@
+[Speaker 1]
+Uh, I want to say a couple of remarks on what I noticed during grading both the good and the bad to help you. Uh, well, get that a great, uh, for a future hackathons. I want to say a couple of things about weeks 8 to 10 because you might already have been wondering what we are going to do in those weeks.
+
+I think Bob already mentioned it a little bit, but I'll, uh, give a little bit more information on that, uh, and a little sneak peek in what we're gonna do next term and what we expect you guys to do so in terms of the. Grading. What we note we are still noticing is there are quite a few submissions.
+
+Where the use of AI has gone a bit through the roof. Yes, we expect you to use AI tools to provide a product for the Hector. That's the explicit assignment that we give you. What we do not ask you to do is to give the entire assignment, including the reflection and the motivation and the description of your work to AI.
+
+To press generate, close your eyes and ship it. I have seen some crap with just entire sections missing, uh, still AI writing things like before final submission. Please do this and this and this, and it's still in the final submission. I've seen half a document with rastel in freaking Spanish.
+
+Uh. Guys. Yes, use AI in your work. Please do. That's the purpose of the assignment. That's the purpose of the program. But that Darkness mean. Donald does not mean use it blindly and not review your work at all. We want to see the interaction between human and Ai, and not just the AI.
+
+And yes, I'm gonna mark it down if it's just blind AI slope that's being submitted into GitHub, uh, this is gonna become even more important in the next couple of hackathons, because another. Aspect of using AI responsibly is explainable. AI, we want you to know what your AI is doing.
+
+The AI doesn't know what it's doing because stupid large language model, but we want you to know what the AI is doing. We want you to explain what the aire generated because so far the AI explanations of what the AIS generated have been utter crap. I've seen a couple of those videos and.
+
+They, they don't help at all. So, please review your work. Use AI, but use it responsibly and explain it in your own words. That's going to become very important. Uh, and I've had quite a few groups which had pretty good submissions, but that I had to mark down heavily because of the the s***** final submission.
+
+That I found in a GitHub people. Um, so that's, that's one of the main things, uh, please put a little bit more effort into that, and your your grades are gonna go way up. And hopefully you're enjoying this as well. Um, as far as weeks, 8 to 10 are concerned.
+
+So, as a sneak peek into next term, uh, you're gonna do a bigger project, right? We're gonna make bigger groups, and we're going to do a bigger project. You're basically become gonna become a development team. Uh, the teachers are gonna play a bit of a product owner type of role.
+
+You're gonna get your own, probably fictional, but still kinda real.
+
+Target group or Target company or client, if you will, where you're gonna create product or products for. Um, but I'll get to it, uh?
+
+Uh, help you get to a client a proper user group, a setup of your tiny little AI based company. Uh, we're gonna do a process called design thinking in weeks eight to ten. Those are gonna be very interactive, uh, workshops. Which are going to involve a lot of very creative, annoying stuff, and not a lot of.
+
+Laptops and AI related stuff. There will be Post-its there might even be Lego. So, we're gonna do sessions like that. Uh, the reason why we do that is because we've noticed that the ideas that so far have come out of AI, are not creative at all, uh, and we want to have your minds at work for the ideas for the clients for the concepts, uh, for what you want to do from that point onwards?
+
+Uh, AI is gonna get going again. This will also include a little bit of speed. Dating to facilitate the the forming of groups and getting to. Yeah, getting a match between students and prospective clients and all that good stuff. That means weeks 8, 9, and 10 are going to be sessions where the whole session or most of the whole session is going to be devoted to actual interaction with each other and with your teachers here at the University.
+
+Um, so please take that into account while making your your. Plants. You cannot interact and brainstorm with your group using all kind of different. A workshop sessions. If you're not here, so weeks 8, 9, and 10, very interactive, no homework, or hardly any homework. So, that's the good part.
+
+But the bad part is lots of interaction in the sessions here. Right? So that's week eight, nine, and then more details are to follow. Um, but that's the digest of it. Design thinking in three phases during three workshops, uh, so that at the end, hopefully you'll have a nice little group together.
+
+You have a nice. Probably fictional, but maybe kind of real client. And a big backlog of ideas and products that you want to develop and launch in the next term. Okay? Questions. I know you have one already.
+
+[Speaker 2]
+Yes, you can,
+
+[Speaker 1]
+And we will facilitate doing so during the first session. Uh, because I can imagine there's also gonna be a match between prospective clients ideas and the students who want to do those ideas, and that's going to be included in the first session in some kind of speed dating type of fashion.
+
+Uh, we do not expect you to make Tinder profiles, but we'll, we'll, we'll figure something out on how to facilitate that, yes. And this is also the reason why we have been annoyingly mixing you up with new partners every single week so that you already kind of get to know each other.
+
+So, when we are going to ask you, uh, to, to get together and and form groups and get together on ideas that you have some existing idea? Of what your fellow students are like and what they like and don't like, yes. Any other questions on weeks eight to ten?
+
+Okay, good. I'm hoping to make really fun sessions out of those, but also annoying because you can't just ask AI. Give me my ideas. The ideas have to come out of your head, actual thinking of our official thinking. Okay. Um, hackathon. I don't know whether Bob has already pushed the bottom.
+
+The the playlist of the different YouTube videos I will try to make it today, and I will post. A message on brightspace with the playlist with all 21 videos from today's assignment. So you can watch them and like them, and I will see who comes out on top. I have to say, there are really quite a couple of submissions.
+
+Where I was really impressed with what I saw, and I think you could just slap the logo of an NGO at the end and ship it so it looks really nice. Anyway. Uh, two days hackathon. Why do you keep making me log in? It's called mobile Showdown. Has put it in the wrong folder.
+
+Yeah, it's below week five notes in the actual week five folder. I don't fix that. Here we go. Yes, so? It's the idea, and this is based on what you've already learned this week during the sessions is. You're gonna use real. Uh, models with real data to come to Real Results, so the result will be an actual Jupiter notebook, uh, where you have a couple of AI models and competing to provide the best results, and you will be the one that's coaching these AI models to come to.
+
+At the best possible result and your sustainable development goal will be a decent work in economic growth and it. It's up to you to find your own data set to work with and maybe try a few. Um.
+
+I'm gonna stress again that the idea is the cooperation between you and the AI. Yes, you can just get this clip this assignment. Chuck it in the cloth and see what the result is going to be, but I'm explicitly expecting you to tell me what you have done to make sure that the AI gets the best possible results out of these models.
+
+No, I do not expect you to write a python code yourself, of course not. There is no way you can write this by heart. Uh, but I do expect you to know what your code is doing and why your code is doing it. If you do not know why?
+
+Ask your AI to explain it to you, Ruth. You like you're a five-year-old? Uh, but I do expect you to understand what is going on within your Jupiter notebook, and I expect you to explain to us in your submission how you got to your final result. That's an important part of the assignment, and we really want to get you to the point where you're not just.
+
+Getting AI to work for you, but getting out to work with you and collaborating with the AI. Um, there is a lot of great opportunities with a lot of great data sets out there. So, again, please try to. And come up with genuine ideas and start looking for data sets there to not just prompt chechupd for an idea, because then we'll gonna run into the issue that we have the same idea over and over again with really boring submissions.
+
+And there is so much fun to be had and so many creative data sets to work with so. Try to brainstorm yourself a little bit good practice for sessions eight to ten as well. Um. If you have any questions on the setup on how we want you to work, I will of course be available to answer them.
+
+And the groups. Uh. This week's groups are.
+
+Yes, and I have the the questions again. Please, please, please, please, please provide me with your getups. Yeah, you see, the Sophia was named and shamed by marking her nice and red, but now she has provided her GitHub repo. So now, uh, I will unrest you, uh, but, uh, um.
+
+Okay.
