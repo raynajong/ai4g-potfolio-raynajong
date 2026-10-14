@@ -1,0 +1,8 @@
+# Python 3.9+; compatible bounds for the user's Python 3.9 installation.
+transformers>=4.45,<4.58
+torch>=2.2,<2.9
+pandas>=2.1,<2.4
+streamlit>=1.40,<1.51
+websocket-client>=1.7,<2
+vaderSentiment>=3.3.2,<4
+scikit-learn>=1.3,<1.7
