@@ -61,26 +61,10 @@ are removed only when their deletion event is received; deletion while offline
 or outside replay retention may be missed. Review current source policies before
 publishing or redistributing content. A CSV/database may contain personal data.
 
-## Evaluation
-Blindly label 50 real posts with overall text sentiment, compare stored RoBERTa
-predictions to VADER on the same texts, report accuracy, macro F1 and confusion
-matrices. Freeze a collection copy for stable evaluation. The evaluator refuses
-to score sampled posts if their saved text changed or was deleted. This is a
-small convenience sample, not proof of deployment reliability. Report actual
-failure cases and disagreements honestly; neither model is assumed better.
-
 ## What this must not be used for
 Emergency response, automatic security decisions, identifying suspicious people,
 ranking individual stations from sparse posts, or claims about what all women or
 all passengers feel. Negative sentiment may concern delays rather than danger.
-
-## Submission checklist
-- Code, requirements and run instructions.
-- Actual collection duration, gaps, counts and source/filter choices.
-- Saved real database or permitted CSV; screenshots or demo recording of results.
-- 50 manual labels, metrics, comparison and actual error cases if available.
-- Reflection, source/model attribution, SDG rationale, team roles and limitations.
-Confirm the exact submission requirements against your teacher's instructions.
 
 ## Sources
 - Model card: https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
