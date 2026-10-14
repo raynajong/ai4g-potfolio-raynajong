@@ -1,9 +1,5 @@
 # Start here — Mac / VS Code
 
-This is a complete replacement project. Keep your previous folder as a backup.
-Unzip this folder, then VS Code → File → Open Folder → transit_safety_pulse_bluesky.
-Do not put files inside venv. No Reddit keys, Hugging Face key or .env is needed.
-
 ## First terminal: setup (one command at a time)
 
 Terminal → New Terminal, then:
