@@ -25,6 +25,9 @@
 
 **Tool we had to use:** Python with scikit-learn, in a Jupyter notebook / Google Colab.
 
+**Youtube link:** https://youtu.be/DscNu96ViJA
+
+
 **SDG we had to address:** SDG 8 — Decent Work and Economic Growth, particularly Target 8.10 (stronger financial institutions and access to financial services).
 
 **What problem does it solve, and for whom?**
