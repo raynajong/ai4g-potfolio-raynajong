@@ -7,7 +7,7 @@
 **Application:** Python + Streamlit + Supabase  
 **Dataset:** 419 self-collected and labelled images from the Netherlands in The Hague
 
-**Youtube video:**
+**Youtube video:** https://www.youtube.com/watch?v=ecBgh1NomPg
 
 ---
 
