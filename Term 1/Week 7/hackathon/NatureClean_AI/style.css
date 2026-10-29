@@ -1,0 +1,77 @@
+/* NatureClean AI — dark editorial / mint identity */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+:root { --forest:#0b1919; --mint:#a9f5c6; --sage:#5fbf9b; --muted:#9cadaa; --cream:#f4f6ef; }
+html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
+.stApp { background: radial-gradient(ellipse 82% 38% at 50% -10%, #1d3732 0%, #0b1517 62%, #0a1114 100%) fixed; color:#eff4f1; }
+#MainMenu, footer { visibility:hidden; }
+.block-container { max-width:1220px; padding-top:2.3rem; padding-bottom:4rem; }
+h1,h2,h3,h4 { font-family: 'Outfit', sans-serif !important; letter-spacing:-0.035em; }
+h1 { font-weight:800 !important; }
+[data-testid="stSidebar"] { background-color:#0d191b; }
+[data-testid="stVerticalBlockBorderWrapper"]:has(.card-anchor) { background:#101e20; border:1px solid #2a3c3b; border-radius:22px; }
+.brandbar {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:25px;}
+.brand {display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;letter-spacing:-1px;color:#f5faf5;}
+.brandmark {display:grid;place-items:center;width:39px;height:39px;border-radius:12px;background:linear-gradient(140deg,#a7f1c0,#5baf9b);color:#0a241b;font-size:21px;}
+.tinybadge {font-size:11px;letter-spacing:.055em;text-transform:uppercase;border:1px solid #2b4943;color:#9ad9b6;padding:8px 12px;border-radius:99px;white-space:nowrap;}
+.hero {padding:35px 0 24px;}
+.eyebrow {color:#90d4af;text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:.17em;margin-bottom:15px;}
+.hero h1 {font-size:clamp(44px,6vw,75px);line-height:1.02;margin:0 0 17px;color:#f2f8f2;font-weight:800;}
+.hero h1 em {font-style:normal;color:#a9f5c6;}
+.hero p {font-size:17px;line-height:1.7;color:#acc0b9;max-width:700px;margin-bottom:12px;}
+.pillline {display:flex;gap:10px;flex-wrap:wrap;margin-top:19px;margin-bottom:5px;}
+.pill {display:inline-block;padding:7px 11px;color:#a6c7b8;background:#142825;border:1px solid #28463c;border-radius:999px;font-size:12px;}
+.sectionhint {font-size:12px;color:#9ab9ac;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:2px 0 12px;}
+.stepcard {border:1px solid #29403a;background:#132222;border-radius:18px;padding:18px 19px;min-height:114px;}
+.stepnum {color:#92dcb4;font-size:12px;font-weight:800;letter-spacing:.14em;margin-bottom:10px;}
+.steptitle {font-weight:700;color:#f3f8f3;font-size:16px;margin-bottom:5px;}
+.stepdesc {font-size:12px;color:#9baea9;line-height:1.55;}
+.stTabs [data-baseweb="tab-list"] {gap:14px;border-bottom:1px solid #29403a;margin:14px 0 26px;}
+.stTabs [data-baseweb="tab"] {background:transparent;border-radius:0;font-weight:700;font-size:15px;padding:12px 14px;color:#a4bbb3;}
+.stTabs [aria-selected="true"] {color:#b7f6c9!important;border-bottom:2px solid #a9f5c6!important;}
+.stButton > button[kind="primary"], [data-testid="stFormSubmitButton"] button[kind="primary"] {background:#a7f2c2!important;color:#08221b!important;border:1px solid #a7f2c2!important;border-radius:11px!important;font-weight:800!important;}
+.stButton > button, [data-testid="stFormSubmitButton"] button {border-radius:11px!important;font-weight:650;}
+[data-testid="stFileUploader"] {background:#102022;padding:16px 17px;border:1px dashed #4a685e;border-radius:16px;}
+[data-testid="stFileUploader"] section {border-color:#3d6755!important;background:#122524!important;border-radius:11px;}
+[data-testid="stImage"] img {border-radius:16px;border:1px solid #243c36;}
+[data-testid="stMetric"] {background:#132523;padding:17px 19px;border:1px solid #2d4b40;border-radius:16px;}
+[data-testid="stMetricLabel"] {color:#a9beb5!important;}
+[data-testid="stMetricValue"] {color:#b4f6ca!important;font-family:'Outfit',sans-serif;font-size:30px!important;}
+[data-testid="stForm"] {border:1px solid #2f4b42;border-radius:19px;padding:22px;background:#12211f;}
+[data-testid="stDataFrame"] {border-radius:14px;overflow:hidden;}
+[data-testid="stAlert"] {border-radius:12px;}
+.subtle {color:#93aaa1;font-size:13px;line-height:1.7;}
+.infobox {border:1px solid #29443d;border-radius:14px;padding:15px 17px;background:#142522;color:#b8cfc2;line-height:1.65;font-size:13px;}
+.footline {margin-top:32px;padding-top:18px;border-top:1px solid #29403a;color:#6e9385;font-size:12px;}
+@media(max-width:760px){.block-container{padding-top:1.2rem}.hero{padding-top:16px}.brandbar{align-items:flex-start;flex-direction:column}.hero h1{font-size:43px}.hero p{font-size:15px}}
+/* V2 layout additions */
+.hero.compact {padding:26px 0 26px;}
+.hero.compact h1 {font-size:clamp(37px,5vw,62px);}
+.featurebox {padding:23px 25px;background:linear-gradient(135deg,#132b26,#10201e);border:1px solid #34584a;border-radius:20px;margin:10px 0 18px;}
+.featurebox h3 {font-size:23px;color:#f6fff8;margin:5px 0 10px;}
+.featurebox p {color:#a5c4b5;line-height:1.75;font-size:14px;}
+.rankrow {display:flex;gap:15px;align-items:center;background:#11231f;border:1px solid #29483c;padding:15px 18px;margin:9px 0;border-radius:14px;}
+.ranknumber {color:#a4e9c0;font-weight:800;font-size:19px;min-width:35px;}
+.rankname {font-weight:700;color:#f1fcf5;flex:1;overflow-wrap:anywhere;}
+.rankpoints {color:#a5f5c9;font-family:'Outfit',sans-serif;font-size:23px;font-weight:800;}
+.rankpoints span {font-size:12px;font-family:'DM Sans',sans-serif;color:#9bc1ae;font-weight:600;}
+.youmark {font-size:12px;color:#94cbae;margin-left:7px;font-weight:500;}
+.profileheadline {display:flex;align-items:center;gap:20px;margin:20px 0 28px;}
+.profileheadline .avatar {width:68px;height:68px;border-radius:19px;background:linear-gradient(140deg,#a7f1c0,#4b9f88);color:#06251b;font-size:35px;display:grid;place-items:center;}
+.profileheadline h2 {margin:0;font-family:'Outfit',sans-serif;font-size:29px;color:#f2fff5;}
+.profileheadline p {margin:5px 0 0;color:#a4c3b5;font-size:13px;}
+.activityrow {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 16px;margin:9px 0;background:#132521;border:1px solid #2c423c;border-radius:12px;color:#b8d3c5;}
+.activityrow strong {color:#a7eec1;white-space:nowrap;}
+[data-testid="stRadio"] div[role="radiogroup"] {gap:13px;}
+[data-testid="stRadio"] label {padding:7px 9px;border-radius:9px;}
+@media (max-width:760px) {.rankpoints{font-size:18px}.profileheadline h2{font-size:24px}.featurebox{padding:18px}.rankrow{padding:12px;}}
+
+/* Proposed monthly reward — clearly not an active contest or promised prize. */
+.rewardidea {display:flex;align-items:flex-start;gap:17px;padding:21px 24px;
+  margin:17px 0 19px;background:linear-gradient(125deg,#24382d,#152620);
+  border:1px solid #76613d;border-radius:18px;color:#f7f5ec;}
+.rewardmark {display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;
+  font-size:24px;color:#e9cc7a;background:#3c382a;border-radius:12px;}
+.rewardtag {font-size:10px;color:#edd38d;letter-spacing:.12em;font-weight:800;}
+.rewardidea h3 {margin:5px 0 4px;font-size:21px;color:#f8f6ed;}
+.rewardidea p {margin:0;font-size:13px;color:#c6d7ca;line-height:1.6;}
+@media(max-width:760px){.rewardidea{padding:16px;gap:10px}.rewardmark{flex-basis:34px;width:34px;height:34px}}

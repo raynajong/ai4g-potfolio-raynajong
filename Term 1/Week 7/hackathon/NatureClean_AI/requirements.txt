@@ -1,0 +1,6 @@
+streamlit>=1.42,<2
+inference-sdk>=0.30
+supabase>=2.10,<3
+python-dotenv>=1.0
+Pillow>=10.0
+pandas>=2.2
