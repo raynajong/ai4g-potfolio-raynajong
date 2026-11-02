@@ -22,7 +22,7 @@ _List the files, or link to them. Notebook exports, screenshots, scripts._
 
 **Project title:** Campus Dutch
 
-**My pair partner:** Rayna Jong
+**My pair partner:** Felix Reichle
 
 **Tool we had to use:** Bolt.new
 
