@@ -4,6 +4,8 @@
 **Tool:** n8n  
 **SDG:** 3 — Good Health & Well-being
 
+**YouTube link:** https://youtu.be/qEo9BuKu5Cw
+
 ## Our idea
 We made a daily mental health check-in that gives someone a moment to stop and think about how they are feeling. The user receives an email reminder, fills in a short form and gets a personal message based on their answers. Their check-in is also saved in Google Sheets so they can look back at earlier entries.
 
