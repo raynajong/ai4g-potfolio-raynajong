@@ -162,12 +162,6 @@ The most important thing I learned is how much the different parts depend on eac
 
 I also learned that the project needs to make sense without us standing next to it. Showing the tool is only one part. We also need to explain who it helps, why we chose this approach and where its limits are.
 
-## Project files
-- [n8n workflow export](hackathon/Daily_Mental_Health_Check-in.json)
-- [Screen recording](hackathon/Original_demo.mov)
-- [Presentation slides](hackathon/Original_slides.pdf)
-- [Brainstorm notes and prompts](hackathon/Brainstorm_and_prompts.pdf)
-
 ## Sources
 - [RIVM and Trimbos — Monitor Mentale gezondheid en Middelengebruik Studenten hbo en wo 2025](https://www.rivm.nl/publicaties/monitor-mentale-gezondheid-en-middelengebruik-studenten-hbo-en-wo-2025). Used to support the student well-being context in this README.
 - [United Nations — 2030 Agenda, target 3.4](https://sdgs.un.org/2030agenda). Explains the connection to promoting mental health and well-being.
