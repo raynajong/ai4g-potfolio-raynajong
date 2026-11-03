@@ -77,7 +77,7 @@ The finished film demonstrates the output of this production process. The export
 
 ### Ethical reflection
 
-The garden is fictional and the visuals are AI-generated. The story uses silence as a metaphor for ecological loss. A viewer could mistake realistic AI footage for a recording of a real event or assume that all gardens respond to heat in the same way. The project description identifies the setting as fictional and explains the limits of the example. Climate change is one pressure on pollinators alongside factors such as habitat loss and pesticides. Generating and regenerating media also uses energy, so the educational value of each extra attempt matters.
+The garden is fictional and the visuals are AI-generated. The story uses silence as a metaphor for ecological loss. A viewer could mistake realistic AI footage for a recording of a real event or assume that all gardens respond to heat in the same way. The project description identifies the setting as fictional and explains the limits of the example. Climate change is one pressure on pollinators alongside factors such as habitat loss and pesticides. Generating and regenerating media also uses energy, so the educational value of each extra attempt matters. If we share the film on social media, we would include a caption identifying it as an AI-generated fictional story. We would also link to the pollinator research so viewers can see how heat affects pollinators alongside other pressures.
 
 ### Checklist
 - [x] Prototype code (or export / workflow file) is in `hackathon/`
@@ -96,15 +96,14 @@ The garden is fictional and the visuals are AI-generated. The story uses silence
 - [ ] Proof of the live demo is in `presentation/` (recording, screenshots, or link)
 
 **How did it go? What would I do differently next time?**
-I think the project went well because we were able to turn our research into a simple story that people can understand without needing a lot of scientific knowledge.
-If I did it again, I would plan the video generation and editing process more carefully from the beginning. Some parts took more attempts than expected, especially getting the visuals, movement, narration and timing to work together. I would also spend more time making the transitions between the shots smoother.
+For the resit, I reviewed the original submission and updated the README based on the feedback. Slyman walked me through how he made the film in ComfyUI and explained how much time and work went into generating the clips, getting the timing right, and combining the video with the narration. His explanation helped me write a clearer breakdown of the workflow. Next time, I would document each step as the project progresses so it’s easier to explain how the final result was made.
 
 ---
 
 ## 4. Reflection
 
 **What is the most important thing I learned this week?**
-The most important thing I learned was how much planning is needed when using AI to create a complete project. It is not just about generating an image or video. We had to think about the story, prompts, consistency between scenes, movement, narration, timing and the final message.
-I also learned that AI-generated content can be useful for communication, but we still need to think about whether what we create could mislead people.
+I learned how the different steps in ComfyUI connect. Before reviewing the workflow, I had mainly seen the finished film. Going through the saved files with Slyman helped me understand how the still images became video clips, how the narration was generated separately, and how everything came together in the final export. I can now explain the workflow in my own words.
+
 **Where does this connect to "AI for Good"?**
-Our project connects to AI for Good because we used AI as a tool for environmental awareness rather than just creating something for entertainment. Existing solutions already focus on things like habitat restoration, reducing pesticides and monitoring pollinators. Our contribution was different: we focused on communication and awareness, using AI to make the issue understandable and emotionally meaningful for a young audience.
+Reviewing The Silent Garden showed me how AI can help explain an environmental issue through a short story. Seeing a lively garden slowly go quiet gives young viewers a simple way to understand how extreme heat can affect flowers and the insects that depend on them. It also made me think about how I would share the film. I’d clearly say the garden is fictional and explain that heat is one of several pressures on pollinators.
