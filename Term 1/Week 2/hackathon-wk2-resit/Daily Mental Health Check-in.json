@@ -1,0 +1,666 @@
+{
+  "name": "Daily Mental Health Check-in",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Daily Check-in",
+        "formDescription": "Take a moment to check in with yourself. Rate each from 1 to 10.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Mood (1-10)",
+              "fieldType": "number",
+              "fieldName": "mood",
+              "placeholder": "1 = very low, 10 = great",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Stress (1-10)",
+              "fieldType": "number",
+              "fieldName": "stress",
+              "placeholder": "1 = calm, 10 = very stressed",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Energy (1-10)",
+              "fieldType": "number",
+              "fieldName": "energy",
+              "placeholder": "1 = drained, 10 = energized",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Main concern",
+              "fieldType": "dropdown",
+              "fieldName": "concern",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Work or study"
+                  },
+                  {
+                    "option": "Relationships"
+                  },
+                  {
+                    "option": "Sleep"
+                  },
+                  {
+                    "option": "Health"
+                  },
+                  {
+                    "option": "Money"
+                  },
+                  {
+                    "option": "Loneliness"
+                  },
+                  {
+                    "option": "Feeling overwhelmed"
+                  },
+                  {
+                    "option": "Nothing in particular"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Anything you want to add? (optional)",
+              "fieldType": "textarea",
+              "fieldName": "note"
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "c57aacda-e1b3-453b-b151-ef744495bc62",
+      "name": "Daily Check-in",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        112
+      ],
+      "webhookId": "0f79e394-4363-4e8f-97a1-9b1500e80a15"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f-date",
+              "name": "date",
+              "type": "string",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "id": "f-mood",
+              "name": "mood",
+              "type": "number",
+              "value": "={{ $json.mood }}"
+            },
+            {
+              "id": "f-stress",
+              "name": "stress",
+              "type": "number",
+              "value": "={{ $json.stress }}"
+            },
+            {
+              "id": "f-energy",
+              "name": "energy",
+              "type": "number",
+              "value": "={{ $json.energy }}"
+            },
+            {
+              "id": "f-concern",
+              "name": "concern",
+              "type": "string",
+              "value": "={{ $json.concern }}"
+            },
+            {
+              "id": "f-note",
+              "name": "note",
+              "type": "string",
+              "value": "={{ $json.note || 'nothing added' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d4024db9-eb90-4afa-97f2-4801f49288c3",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        0,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Mood: {{ $json.mood }}/10\nStress: {{ $json.stress }}/10\nEnergy: {{ $json.energy }}/10\nMain concern: {{ $json.concern }}\nAdditional note: {{ $('Edit Fields').item.json.note }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a warm, supportive wellbeing assistant for a daily mental health check-in tool. A user has just submitted their daily check-in with a mood score, stress score, energy score, a selected main concern, and an optional free-text note.\n\nUse these ranges to interpret the numbers:\n- Mood: 1-3 = very low mood, 4-6 = neutral/difficult day, 7-10 = positive mood\n- Stress: 1-3 = low stress, 4-6 = moderate stress, 7-10 = high stress\n- Energy: 1-3 = low energy, 4-6 = moderate energy, 7-10 = good energy\n\nConsider the numbers together with the selected concern and note, not in isolation. For example: low mood + high stress + relationship problems calls for calm emotional support; moderate mood + low energy + poor sleep calls for a gentle low-effort suggestion; high mood + low stress + \"doing okay\" calls for light encouragement.\n\nYour job: write a short, personal, non-clinical response with exactly three parts:\n1. Today's affirmation — one short, sincere sentence. No cliches, no generic \"you got this.\"\n2. A response — 1-2 sentences that reflect back what they shared in a warm, specific way (reference their concern and/or note if given). Do not diagnose, moralize, or minimize.\n3. A small action — one concrete, low-effort thing they can do today (under 5 minutes), sized appropriately to their energy level.\n\nTone: warm, grounded, human — not clinical, not overly cheerful, not preachy. Keep the whole response under 80 words total. Never suggest this replaces professional help. If mood or stress indicates significant distress, gently include one line pointing toward a real support option (a trusted person, or professional/crisis resources) without being alarming.\n\nOutput format (plain text, no markdown headers):\nToday's affirmation: [sentence]\n[response paragraph]\nSmall action: [action]"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "id": "f40545c1-5cda-44f0-a8db-afcb9f74f6e6",
+      "name": "Generate Response",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        224,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {
+          "maxTokens": 2000,
+          "reasoningEffort": "low"
+        }
+      },
+      "id": "e0e7b414-686e-45ce-bba3-748faefdb8dd",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        304,
+        336
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": null,
+          "name": "Gateway credits",
+          "__aiGatewayManaged": true
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "r-date",
+              "name": "date",
+              "type": "string",
+              "value": "={{ $('Edit Fields').item.json.date }}"
+            },
+            {
+              "id": "r-mood",
+              "name": "mood",
+              "type": "number",
+              "value": "={{ $('Edit Fields').item.json.mood }}"
+            },
+            {
+              "id": "r-stress",
+              "name": "stress",
+              "type": "number",
+              "value": "={{ $('Edit Fields').item.json.stress }}"
+            },
+            {
+              "id": "r-energy",
+              "name": "energy",
+              "type": "number",
+              "value": "={{ $('Edit Fields').item.json.energy }}"
+            },
+            {
+              "id": "r-concern",
+              "name": "concern",
+              "type": "string",
+              "value": "={{ $('Edit Fields').item.json.concern }}"
+            },
+            {
+              "id": "r-note",
+              "name": "note",
+              "type": "string",
+              "value": "={{ $('Edit Fields').item.json.note }}"
+            },
+            {
+              "id": "r-ai",
+              "name": "ai_response",
+              "type": "string",
+              "value": "={{ $json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7db5663d-df4c-4cb7-9578-ea628619a863",
+      "name": "Build Sheet Row",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        464,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1Hh9svPQt7d07mAT8Wf1pl-CAaBzYU4keYOgtwn4GbV4",
+          "cachedResultName": "Mental Health Checkins"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultName": "Lapas1"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "schema": [
+            {
+              "id": "date",
+              "displayName": "date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mood",
+              "displayName": "mood",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "stress",
+              "displayName": "stress",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "energy",
+              "displayName": "energy",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "concern",
+              "displayName": "concern",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "note",
+              "displayName": "note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_response",
+              "displayName": "ai_response",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6fc2cc11-e19a-4b2d-80f8-2bd87d789e47",
+      "name": "Log to Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        304
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "18txhllhNhBlGpFq",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "mood-low",
+              "leftValue": "={{ $('Edit Fields').item.json.mood }}",
+              "rightValue": 3,
+              "operator": {
+                "type": "number",
+                "operation": "lte"
+              }
+            },
+            {
+              "id": "stress-high",
+              "leftValue": "={{ $('Edit Fields').item.json.stress }}",
+              "rightValue": 8,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2992466b-2a88-4d20-888e-a35512b2887e",
+      "name": "Needs Support?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        800,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "crisis-text",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $('Generate Response').item.json.text }}\n\n---\nIf you need support right now:\n113 Zelfmoordpreventie — call 0800-0113 (free, 24/7) or chat at 113.nl\nYou can also contact your GP (huisarts) or reach out to a trusted person."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "77ef3d66-e2e7-4a85-af5b-61740cdb78f1",
+      "name": "Add Support Resources",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1024,
+        -32
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "burnern8n@gmail.com",
+        "toEmail": "PancakeMous@outlook.com",
+        "subject": "Your daily check-in",
+        "html": "=<div style=\"max-width:640px;margin:0 auto;font-family:sans-serif;line-height:1.6;white-space:pre-wrap;font-size:16px;\">{{ $json.text }}</div>",
+        "options": {}
+      },
+      "id": "a5350f6a-0061-49ad-b404-68464d6de594",
+      "name": "Email Final Message",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1248,
+        16
+      ],
+      "webhookId": "3863e2b5-1455-41c8-a20d-41169f9c69d4",
+      "credentials": {
+        "smtp": {
+          "id": "R5x5Z6QfwqPr16X6",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "showText",
+        "responseText": "=<div style=\"max-width:640px;margin:0 auto;font-family:sans-serif;line-height:1.6;white-space:pre-wrap;font-size:16px;\">{{ $json.text }}</div>"
+      },
+      "id": "faaed6aa-a141-4a58-80c7-394531182803",
+      "name": "Show Response",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        576,
+        112
+      ],
+      "webhookId": "fb938782-22e8-4b9e-9f08-3f316ec7e486"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "pass-text",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $('Generate Response').item.json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dc5f0dae-6926-44bf-8641-a60ab4d732b4",
+      "name": "Pass Response Through",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1024,
+        256
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 18
+            }
+          ]
+        }
+      },
+      "id": "08087a47-ecae-42c0-8926-b96552be5793",
+      "name": "Daily Reminder 18:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -224,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "burnern8n@gmail.com",
+        "toEmail": "PancakeMous@outlook.com",
+        "subject": "Time for your daily check-in",
+        "html": "Take a moment to check in with yourself today. Open your check-in form here:<br><br><a href=\"https://pancakemous.app.n8n.cloud/form/0f79e394-4363-4e8f-97a1-9b1500e80a15\">Daily Check-in form</a>",
+        "options": {}
+      },
+      "id": "52552a45-8f57-4ac8-8c1e-3bae98c8a60d",
+      "name": "Email Reminder",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        480
+      ],
+      "webhookId": "d3547b15-0a58-42e4-8fbe-c110855170d8",
+      "credentials": {
+        "smtp": {
+          "id": "R5x5Z6QfwqPr16X6",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Daily Check-in": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Generate Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Response": {
+      "main": [
+        [
+          {
+            "node": "Build Sheet Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate Response",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Sheet Row": {
+      "main": [
+        [
+          {
+            "node": "Log to Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log to Google Sheet": {
+      "main": [
+        [
+          {
+            "node": "Needs Support?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Needs Support?": {
+      "main": [
+        [
+          {
+            "node": "Add Support Resources",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pass Response Through",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Support Resources": {
+      "main": [
+        [
+          {
+            "node": "Email Final Message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Show Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pass Response Through": {
+      "main": [
+        [
+          {
+            "node": "Email Final Message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Show Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily Reminder 18:00": {
+      "main": [
+        [
+          {
+            "node": "Email Reminder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "a0fd20ec-0501-4165-b1d4-9cf771de559c",
+  "meta": {
+    "instanceId": "1b8a8cd9fd8b2de39ee353ad6744549b28b2141490b02c0e8086c00ad7a8d92a"
+  },
+  "nodeGroups": [],
+  "id": "82bnOm3iVzrjYiQ3",
+  "tags": []
+}
